@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:spotifyclone/const/assets.dart';
+import 'package:spotifyclone/const/routes.dart';
+import 'package:spotifyclone/main_screen.dart';
 
 import '../../../const/dimensions.dart';
+import '../../widgets/home_album_card.dart';
 import '../../widgets/mini_playlist_card.dart';
+import '../../widgets/new_release_card.dart';
 
 part 'home_screen_widgets.dart';
 
@@ -16,38 +20,41 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: Dimensions.pagePadding,
-        child: Column(
-          children: [
-            SizedBox(height: MediaQuery.of(context).size.height * 0.07),
-            const HomeHeadline(),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-            const SizedBox(
-              height: 210,
-              child: MiniPlaylistGrid(),
-            ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-            ListTile(
-              contentPadding: EdgeInsets.zero,
-              title: Text(
-                'NEW RELEASE FROM',
-                style: Theme.of(context).textTheme.caption,
+    return MainScreen(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: Dimensions.pagePadding,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: MediaQuery.of(context).size.height * 0.07),
+              const HomeHeadline(),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+              const SizedBox(
+                height: 210,
+                child: MiniPlaylistGrid(),
               ),
-              subtitle: Text(
-                'Kendrick Lamar',
-                style: Theme.of(context).textTheme.subtitle1,
+              const HomeListTile(
+                title: 'NEW RELEASE FROM',
+                subtitle: 'Kendrick Lamar',
               ),
-              leading: const CircleAvatar(
-                foregroundImage: AssetImage(
-                  Assets.placeholder,
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+              const NewReleaseCard(),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+              const HorizontalAlbumListWithTitle(
+                title: 'Made for Feyzullah',
+              ),
+              const HorizontalAlbumListWithTitle(
+                title: 'Discover',
+              ),
+              const HorizontalAlbumListWithWidget(
+                title: HomeListTile(
+                  title: 'More Like',
+                  subtitle: 'Rammstein',
                 ),
               ),
-            ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-            const NewReleaseCard()
-          ],
+            ],
+          ),
         ),
       ),
     );

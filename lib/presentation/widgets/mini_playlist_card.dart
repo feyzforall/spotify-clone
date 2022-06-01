@@ -19,7 +19,7 @@ class MiniPlaylistCard extends StatelessWidget {
           children: [
             Image.asset(
               Assets.placeholder,
-              width: 70,
+              width: 60,
               height: 100,
               fit: BoxFit.fill,
             ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'presentation/pages/home/home_screen.dart';
+import 'package:spotifyclone/const/routes.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,9 +12,8 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      home: const Scaffold(
-        body: HomeScreen(),
-      ),
+      initialRoute: Routes.homeRoute,
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }
