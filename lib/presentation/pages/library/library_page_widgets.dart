@@ -129,22 +129,22 @@ class GridList extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(4.0),
                     child: Image.asset(
-                      Assets.placeholder,
+                      playlists[index].image,
                       fit: BoxFit.cover,
                       height: 150,
                     ),
                   ),
                   const SizedBox(height: 10),
-                  const Text('asdasfasfsa'),
+                  Text(playlists[index].title),
                   Text(
-                    'asdasfasfasf',
+                    playlists[index].subtitle,
                     style: Theme.of(context).textTheme.caption,
                   ),
                 ],
               ),
             );
           },
-          childCount: 20,
+          childCount: playlists.length,
         ),
       ),
     );
@@ -168,12 +168,12 @@ class TileList extends StatelessWidget {
             ),
             child: ListTile(
               contentPadding: EdgeInsets.zero,
-              title: const Text('Playlist 1'),
-              subtitle: const Text('Playlist - Feyzullah'),
+              title: Text(playlists[index].title),
+              subtitle: Text(playlists[index].subtitle),
               leading: ClipRRect(
                 borderRadius: BorderRadius.circular(4.0),
                 child: Image.asset(
-                  Assets.placeholder,
+                  playlists[index].image,
                   width: 60,
                   height: 60,
                   fit: BoxFit.cover,
@@ -182,7 +182,7 @@ class TileList extends StatelessWidget {
             ),
           );
         },
-        childCount: 20,
+        childCount: playlists.length,
       ),
     );
   }

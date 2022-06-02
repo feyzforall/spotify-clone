@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
 import 'package:spotifyclone/const/assets.dart';
 import 'package:spotifyclone/const/dimensions.dart';
+import 'package:spotifyclone/entities/playlist.dart';
 import 'package:spotifyclone/main_screen.dart';
 import 'package:spotifyclone/presentation/widgets/home_album_card.dart';
 import 'package:spotifyclone/usecases/library_filter_notifier.dart';

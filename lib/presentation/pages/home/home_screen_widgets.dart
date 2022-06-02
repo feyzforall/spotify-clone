@@ -51,7 +51,10 @@ class MiniPlaylistGrid extends StatelessWidget {
       ),
       itemCount: 6,
       itemBuilder: (BuildContext context, int index) {
-        return MiniPlaylistCard(index: index);
+        return MiniPlaylistCard(
+          index: index,
+          playlist: playlists[index],
+        );
       },
     );
   }
@@ -143,14 +146,15 @@ class AlbumList extends StatelessWidget {
     return SizedBox(
       height: 170,
       child: ListView.builder(
-        itemCount: 7,
+        itemCount: playlists.length,
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding: const EdgeInsets.only(right: 8.0),
             child: HomeAlbumCard(
-              index: index,
+              title: playlists[index].title,
+              image: playlists[index].image,
             ),
           );
         },

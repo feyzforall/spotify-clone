@@ -21,6 +21,7 @@ class _MainScreenState extends State<MainScreen> {
         return BottomNavigationBar(
           backgroundColor: Colors.transparent,
           onTap: (int index) => router.setActiveIndex(index),
+          currentIndex: router.activeIndex,
           elevation: 0,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: 'Home'),

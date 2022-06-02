@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotifyclone/entities/playlist.dart';
 
 import '../../const/assets.dart';
 
@@ -6,9 +7,11 @@ class MiniPlaylistCard extends StatelessWidget {
   const MiniPlaylistCard({
     Key? key,
     required this.index,
+    required this.playlist,
   }) : super(key: key);
 
   final int index;
+  final Playlist playlist;
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +21,13 @@ class MiniPlaylistCard extends StatelessWidget {
         child: Row(
           children: [
             Image.asset(
-              Assets.placeholder,
+              playlist.image,
               width: 60,
               height: 100,
               fit: BoxFit.fill,
             ),
             const SizedBox(width: 20),
-            Text('Playlist ${index + 1}'),
+            Text(playlist.title),
           ],
         ),
         decoration: const BoxDecoration(
