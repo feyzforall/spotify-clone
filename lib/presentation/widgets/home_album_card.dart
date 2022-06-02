@@ -12,20 +12,23 @@ class HomeAlbumCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(
-          Assets.placeholder,
-          fit: BoxFit.cover,
-          width: 120,
-          height: 120,
-        ),
-        const SizedBox(height: 10),
-        Text(
-          'Playlist ${index + 1}',
-          style: Theme.of(context).textTheme.caption,
-        )
-      ],
+    return Container(
+      color: Colors.white,
+      child: Column(
+        children: [
+          Image.asset(
+            Assets.placeholder,
+            fit: BoxFit.cover,
+            width: 120,
+            height: 120,
+          ),
+          const SizedBox(height: 10),
+          Text(
+            'Playlist ${index + 1}',
+            style: Theme.of(context).textTheme.caption,
+          )
+        ],
+      ),
     );
   }
 }
