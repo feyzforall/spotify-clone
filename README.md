@@ -1,16 +1,8 @@
-# spotifyclone
+# Spotify UI Clone
 
-A new Flutter project.
+It is a Spotify UI clone application made using by autoroute and provider packages.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Simulator Screen Shot - iPhone 11 - 2022-06-02 at 18 21 56](https://user-images.githubusercontent.com/30154300/171663857-1b309360-d2ab-4655-bef5-db980b1b829c.png)
+![simulator_screenshot_FF77A3D3-94A0-4DDC-A42E-B2EB3DE376D8](https://user-images.githubusercontent.com/30154300/171663900-c9b32f9b-3c20-4cf7-8650-075a9db9dc73.png)
+![simulator_screenshot_7339B31D-3CE2-4837-AD6F-F0624A81B76E](https://user-images.githubusercontent.com/30154300/171663920-eb102485-0634-434e-ade2-017697e307ec.png)
