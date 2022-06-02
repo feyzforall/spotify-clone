@@ -11,16 +11,17 @@
 // ignore_for_file: type=lint
 
 import 'package:auto_route/auto_route.dart' as _i2;
-import 'package:flutter/material.dart' as _i6;
+import 'package:flutter/material.dart' as _i7;
 
 import '../main_screen.dart' as _i1;
 import '../presentation/pages/home/home_page.dart' as _i3;
 import '../presentation/pages/home/notifications/notifications_screen.dart'
     as _i4;
 import '../presentation/pages/library/library_page.dart' as _i5;
+import '../presentation/pages/search/search_page.dart' as _i6;
 
 class AppRouter extends _i2.RootStackRouter {
-  AppRouter([_i6.GlobalKey<_i6.NavigatorState>? navigatorKey])
+  AppRouter([_i7.GlobalKey<_i7.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
@@ -37,6 +38,10 @@ class AppRouter extends _i2.RootStackRouter {
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i2.EmptyRouterPage());
     },
+    SearchRouter.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i2.EmptyRouterPage());
+    },
     HomeRoute.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i3.HomePage());
@@ -48,6 +53,10 @@ class AppRouter extends _i2.RootStackRouter {
     LibraryRoute.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i5.LibraryPage());
+    },
+    SearchRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i6.SearchPage());
     }
   };
 
@@ -69,6 +78,13 @@ class AppRouter extends _i2.RootStackRouter {
               children: [
                 _i2.RouteConfig(LibraryRoute.name,
                     path: '', parent: LibraryRouter.name)
+              ]),
+          _i2.RouteConfig(SearchRouter.name,
+              path: 'search',
+              parent: MainScreen.name,
+              children: [
+                _i2.RouteConfig(SearchRoute.name,
+                    path: '', parent: SearchRouter.name)
               ])
         ])
       ];
@@ -102,6 +118,15 @@ class LibraryRouter extends _i2.PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [_i2.EmptyRouterPage]
+class SearchRouter extends _i2.PageRouteInfo<void> {
+  const SearchRouter({List<_i2.PageRouteInfo>? children})
+      : super(SearchRouter.name, path: 'search', initialChildren: children);
+
+  static const String name = 'SearchRouter';
+}
+
+/// generated route for
 /// [_i3.HomePage]
 class HomeRoute extends _i2.PageRouteInfo<void> {
   const HomeRoute() : super(HomeRoute.name, path: '');
@@ -124,4 +149,12 @@ class LibraryRoute extends _i2.PageRouteInfo<void> {
   const LibraryRoute() : super(LibraryRoute.name, path: '');
 
   static const String name = 'LibraryRoute';
+}
+
+/// generated route for
+/// [_i6.SearchPage]
+class SearchRoute extends _i2.PageRouteInfo<void> {
+  const SearchRoute() : super(SearchRoute.name, path: '');
+
+  static const String name = 'SearchRoute';
 }

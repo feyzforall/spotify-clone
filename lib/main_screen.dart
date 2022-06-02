@@ -29,9 +29,9 @@ class _MainScreenState extends State<MainScreen> {
           ],
         );
       },
-      routes: [
+      routes: const [
         HomeRouter(),
-        LibraryRouter(),
+        SearchRouter(),
         LibraryRouter(),
       ],
     );

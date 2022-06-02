@@ -2,6 +2,7 @@ import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:spotifyclone/main_screen.dart';
 import 'package:spotifyclone/presentation/pages/library/library_page.dart';
+import 'package:spotifyclone/presentation/pages/search/search_page.dart';
 import 'package:spotifyclone/presentation/pages/splash/splash_page.dart';
 
 import '../presentation/pages/home/home_page.dart';
@@ -34,7 +35,21 @@ import '../presentation/pages/home/notifications/notifications_screen.dart';
           name: 'LibraryRouter',
           page: EmptyRouterPage,
           children: [
-            AutoRoute(path: '', page: LibraryPage),
+            AutoRoute(
+              path: '',
+              page: LibraryPage,
+            ),
+          ],
+        ),
+        AutoRoute(
+          path: 'search',
+          name: 'SearchRouter',
+          page: EmptyRouterPage,
+          children: [
+            AutoRoute(
+              path: '',
+              page: SearchPage,
+            ),
           ],
         ),
       ],
