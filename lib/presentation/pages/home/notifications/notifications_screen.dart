@@ -5,67 +5,65 @@ import 'package:spotifyclone/const/colors.dart';
 import 'package:spotifyclone/const/dimensions.dart';
 import 'package:spotifyclone/main_screen.dart';
 
-class NotificationsScreen extends StatefulWidget {
-  const NotificationsScreen({Key? key}) : super(key: key);
+class NotificationsPage extends StatefulWidget {
+  const NotificationsPage({Key? key}) : super(key: key);
 
   @override
-  State<NotificationsScreen> createState() => _NotificationsScreenState();
+  State<NotificationsPage> createState() => _NotificationsPageState();
 }
 
-class _NotificationsScreenState extends State<NotificationsScreen> {
+class _NotificationsPageState extends State<NotificationsPage> {
   @override
   Widget build(BuildContext context) {
-    return MainScreen(
-      body: CupertinoPageScaffold(
-        backgroundColor: AppColors.codGray,
-        child: CustomScrollView(
-          slivers: <Widget>[
-            CupertinoSliverNavigationBar(
-              backgroundColor: AppColors.codGray,
-              leading: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).pop();
-                },
-                child: const Icon(
-                  CupertinoIcons.back,
-                  size: 22,
-                ),
-              ),
-              largeTitle: const Text(
-                "What's New",
-                style: TextStyle(color: Colors.white),
+    return CupertinoPageScaffold(
+      backgroundColor: AppColors.codGray,
+      child: CustomScrollView(
+        slivers: <Widget>[
+          CupertinoSliverNavigationBar(
+            backgroundColor: AppColors.codGray,
+            leading: GestureDetector(
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+              child: const Icon(
+                CupertinoIcons.back,
+                size: 22,
               ),
             ),
-            const SliverToBoxAdapter(
-              child: Padding(
-                padding: Dimensions.pagePadding,
-                child: Text(
-                  'The latest releases from artists, podcasts and shows you follow.',
-                  textAlign: TextAlign.start,
-                ),
+            largeTitle: const Text(
+              "What's New",
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: Padding(
+              padding: Dimensions.pagePadding,
+              child: Text(
+                'The latest releases from artists, podcasts and shows you follow.',
+                textAlign: TextAlign.start,
               ),
             ),
-            SliverList(
-              delegate: SliverChildListDelegate(
-                List.generate(
-                  100,
-                  (index) => Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Column(
-                      children: [
-                        NotificationCard(),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.02,
-                        ),
-                        Divider(),
-                      ],
-                    ),
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              List.generate(
+                100,
+                (index) => Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 12.0),
+                  child: Column(
+                    children: [
+                      NotificationCard(),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.02,
+                      ),
+                      Divider(),
+                    ],
                   ),
                 ),
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }

@@ -1,20 +1,44 @@
-import 'package:flutter/material.dart';
+import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:spotifyclone/main_screen.dart';
+import 'package:spotifyclone/presentation/pages/library/library_page.dart';
+import 'package:spotifyclone/presentation/pages/splash/splash_page.dart';
 
-import '../presentation/pages/home/home_screen.dart';
+import '../presentation/pages/home/home_page.dart';
 import '../presentation/pages/home/notifications/notifications_screen.dart';
 
-class Routes {
-  static const String homeRoute = '/';
-  static const String notifications = '/secondScreen';
-
-  static Route<dynamic> generateRoute(RouteSettings settings) {
-    switch (settings.name) {
-      case homeRoute:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
-      case notifications:
-        return MaterialPageRoute(builder: (_) => const NotificationsScreen());
-      default:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
-    }
-  }
-}
+@MaterialAutoRouter(
+  replaceInRouteName: 'Page,Route',
+  routes: <AutoRoute>[
+    AutoRoute(
+      path: '/',
+      page: MainScreen,
+      children: [
+        AutoRoute(
+          path: 'home',
+          name: 'HomeRouter',
+          page: EmptyRouterPage,
+          children: [
+            AutoRoute(
+              path: '',
+              page: HomePage,
+            ),
+            AutoRoute(
+              path: 'notifications',
+              page: NotificationsPage,
+            ),
+          ],
+        ),
+        AutoRoute(
+          path: 'library',
+          name: 'LibraryRouter',
+          page: EmptyRouterPage,
+          children: [
+            AutoRoute(path: '', page: LibraryPage),
+          ],
+        ),
+      ],
+    )
+  ],
+)
+class $AppRouter {}

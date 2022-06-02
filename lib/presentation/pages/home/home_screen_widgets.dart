@@ -1,4 +1,4 @@
-part of 'home_screen.dart';
+part of 'home_page.dart';
 
 class HomeHeadline extends StatelessWidget {
   const HomeHeadline({
@@ -20,7 +20,7 @@ class HomeHeadline extends StatelessWidget {
           children: [
             IconButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, Routes.notifications);
+                  AutoRouter.of(context).push(NotificationsRoute());
                 },
                 icon: const Icon(Icons.notifications_outlined)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.history_outlined)),
