@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:spotifyclone/const/routes.dart';
 import 'package:spotifyclone/const/routes.gr.dart';
+import 'package:spotifyclone/const/theme.dart';
+import 'package:spotifyclone/usecases/library_filter_notifier.dart';
+import 'package:spotifyclone/usecases/sliver_app_bar_notifier.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: ((context) => SliverNotifier()),
+      ),
+      ChangeNotifierProvider(
+        create: ((context) => LibraryFilterNotifier()),
+      )
+    ],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Material App',
-      theme: ThemeData.dark(),
+      theme: customTheme,
       debugShowCheckedModeBanner: false,
       routeInformationParser: _appRouter.defaultRouteParser(),
       routerDelegate: _appRouter.delegate(),
