@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:spotifyclone/const/dimensions.dart';
+import '../../../const/dimensions.dart';
 
 import '../../widgets/genre_card.dart';
 

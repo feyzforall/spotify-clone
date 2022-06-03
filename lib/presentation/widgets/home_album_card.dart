@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../const/assets.dart';
-
 class HomeAlbumCard extends StatelessWidget {
   const HomeAlbumCard({
     Key? key,

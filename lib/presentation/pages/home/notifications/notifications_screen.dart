@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:spotifyclone/const/assets.dart';
-import 'package:spotifyclone/const/colors.dart';
-import 'package:spotifyclone/const/dimensions.dart';
-import 'package:spotifyclone/entities/playlist.dart';
-import 'package:spotifyclone/main_screen.dart';
+
+import '../../../../const/assets.dart';
+import '../../../../const/colors.dart';
+import '../../../../const/dimensions.dart';
+import '../../../../entities/playlist.dart';
 
 part 'notifications_screen_widgets.dart';
 

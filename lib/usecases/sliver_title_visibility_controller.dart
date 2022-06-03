@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
-import 'package:spotifyclone/usecases/sliver_app_bar_notifier.dart';
+
+import 'sliver_app_bar_notifier.dart';
 
 void sliverController(Object? notification, BuildContext context) {
   if (notification is UserScrollNotification) {

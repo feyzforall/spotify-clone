@@ -13,7 +13,7 @@ class CustomSliverAppBar extends StatelessWidget {
       pinned: true,
       toolbarHeight: 90,
       expandedHeight: 150,
-      flexibleSpace: FlexibleAppBar(),
+      flexibleSpace: const FlexibleAppBar(),
     );
   }
 }
@@ -27,7 +27,10 @@ class FlexibleAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlexibleSpaceBar(
       background: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 24.0),
+        padding: const EdgeInsets.symmetric(
+          horizontal: Dimensions.pagePadding,
+          vertical: 2 * Dimensions.pagePadding,
+        ),
         child: Text(
           'Search',
           style: Theme.of(context).textTheme.headline6,
@@ -59,7 +62,7 @@ class GridList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverPadding(
-      padding: Dimensions.pagePadding,
+      padding: const EdgeInsets.all(Dimensions.pagePadding),
       sliver: SliverGrid(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           mainAxisExtent: 120,

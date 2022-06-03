@@ -36,7 +36,7 @@ class CustomSliverAppBar extends StatelessWidget {
       ),
       centerTitle: false,
       expandedHeight: 120.0,
-      flexibleSpace: FlexibleAppBar(),
+      flexibleSpace: const FlexibleAppBar(),
     );
   }
 }
@@ -113,7 +113,7 @@ class GridList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverPadding(
-      padding: Dimensions.pagePadding,
+      padding: const EdgeInsets.all(Dimensions.pagePadding),
       sliver: SliverGrid(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           mainAxisExtent: 220,

@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
-import 'package:spotifyclone/const/assets.dart';
-import 'package:spotifyclone/const/dimensions.dart';
-import 'package:spotifyclone/entities/playlist.dart';
-import 'package:spotifyclone/main_screen.dart';
-import 'package:spotifyclone/presentation/widgets/home_album_card.dart';
-import 'package:spotifyclone/usecases/library_filter_notifier.dart';
-import 'package:spotifyclone/usecases/sliver_app_bar_notifier.dart';
 
+import '../../../const/assets.dart';
+import '../../../const/dimensions.dart';
+import '../../../entities/playlist.dart';
+import '../../../usecases/library_filter_notifier.dart';
+import '../../../usecases/sliver_app_bar_notifier.dart';
 import '../../../usecases/sliver_title_visibility_controller.dart';
 import '../../widgets/filter_pill_button.dart';
 

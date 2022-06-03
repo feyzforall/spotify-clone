@@ -19,12 +19,21 @@ class HomeHeadline extends StatelessWidget {
         Row(
           children: [
             IconButton(
-                onPressed: () {
-                  AutoRouter.of(context).push(NotificationsRoute());
-                },
-                icon: const Icon(Icons.notifications_outlined)),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.history_outlined)),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.settings_outlined)),
+              onPressed: () {
+                AutoRouter.of(context).push(
+                  const NotificationsRoute(),
+                );
+              },
+              icon: const Icon(Icons.notifications_outlined),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.history_outlined),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.settings_outlined),
+            ),
           ],
         )
       ],
@@ -129,7 +138,7 @@ class HorizontalAlbumListWithWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         title,
-        SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+        SizedBox(height: context.smallHeight),
         const AlbumList(),
       ],
     );

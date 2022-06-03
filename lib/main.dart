@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:spotifyclone/const/routes.dart';
-import 'package:spotifyclone/const/routes.gr.dart';
-import 'package:spotifyclone/const/theme.dart';
-import 'package:spotifyclone/usecases/library_filter_notifier.dart';
-import 'package:spotifyclone/usecases/sliver_app_bar_notifier.dart';
+
+import 'const/routes.gr.dart';
+import 'const/theme.dart';
+import 'usecases/library_filter_notifier.dart';
+import 'usecases/sliver_app_bar_notifier.dart';
 
 void main() {
   runApp(MultiProvider(

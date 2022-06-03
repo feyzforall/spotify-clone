@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotifyclone/entities/playlist.dart';
 
-import '../../const/assets.dart';
+import '../../entities/playlist.dart';
 
 class MiniPlaylistCard extends StatelessWidget {
   const MiniPlaylistCard({

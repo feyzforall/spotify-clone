@@ -1,9 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:spotifyclone/const/colors.dart';
-import 'package:spotifyclone/const/routes.gr.dart';
 
-import 'const/routes.dart';
+import 'const/colors.dart';
+import 'const/routes.gr.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);

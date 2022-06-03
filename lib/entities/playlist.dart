@@ -1,4 +1,4 @@
-import 'package:spotifyclone/const/assets.dart';
+import '../const/assets.dart';
 
 class Playlist {
   final String title;

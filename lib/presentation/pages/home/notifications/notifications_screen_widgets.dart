@@ -35,7 +35,7 @@ class NotificationHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SliverToBoxAdapter(
       child: Padding(
-        padding: Dimensions.pagePadding,
+        padding: EdgeInsets.all(Dimensions.pagePadding),
         child: Text(
           'The latest releases from artists, podcasts and shows you follow.',
           textAlign: TextAlign.start,
@@ -115,7 +115,7 @@ class NotificationCard extends StatelessWidget {
             ],
           ),
         ),
-        Text('Episode - 35 min'),
+        const Text('Episode - 35 min'),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.02,
         ),
@@ -132,7 +132,7 @@ class NotificationCard extends StatelessWidget {
                 Icon(Icons.more_horiz_outlined),
               ],
             ),
-            Icon(Icons.play_circle_fill_outlined)
+            const Icon(Icons.play_circle_fill_outlined)
           ],
         )
       ],

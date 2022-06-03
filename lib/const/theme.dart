@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotifyclone/const/colors.dart';
+
+import 'colors.dart';
 
 OutlineInputBorder _customBorder = const OutlineInputBorder(
   borderSide: BorderSide(
@@ -15,7 +16,7 @@ ThemeData customTheme = ThemeData(
     selectedItemColor: Colors.white,
   ),
   inputDecorationTheme: InputDecorationTheme(
-    contentPadding: EdgeInsets.all(8.0),
+    contentPadding: const EdgeInsets.all(8.0),
     border: _customBorder,
     errorBorder: _customBorder,
     enabledBorder: _customBorder,
