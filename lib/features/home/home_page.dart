@@ -22,38 +22,39 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(Dimensions.pagePadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: context.height * 0.7),
-            const HomeHeadline(),
-            SizedBox(height: context.height * 0.1),
-            const SizedBox(
-              height: 210,
-              child: MiniPlaylistGrid(),
-            ),
-            const HomeListTile(
-              title: 'NEW RELEASE FROM',
-              subtitle: 'Kendrick Lamar',
-            ),
-            SizedBox(height: context.height * 0.1),
-            const NewReleaseCard(),
-            SizedBox(height: context.height * 0.3),
-            const HorizontalAlbumListWithTitle(
-              title: 'Made for Feyzullah',
-            ),
-            const HorizontalAlbumListWithTitle(
-              title: 'Discover',
-            ),
-            const HorizontalAlbumListWithWidget(
-              title: HomeListTile(
-                title: 'More Like',
-                subtitle: 'Rammstein',
+      child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(Dimensions.pagePadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const HomeHeadline(),
+              SizedBox(height: context.height * 0.05),
+              const SizedBox(
+                height: 210,
+                child: MiniPlaylistGrid(),
               ),
-            ),
-          ],
+              const HomeListTile(
+                title: 'NEW RELEASE FROM',
+                subtitle: 'Kendrick Lamar',
+              ),
+              SizedBox(height: context.height * 0.01),
+              const NewReleaseCard(),
+              SizedBox(height: context.height * 0.03),
+              const HorizontalAlbumListWithTitle(
+                title: 'Made for Feyzullah',
+              ),
+              const HorizontalAlbumListWithTitle(
+                title: 'Discover',
+              ),
+              const HorizontalAlbumListWithWidget(
+                title: HomeListTile(
+                  title: 'More Like',
+                  subtitle: 'Rammstein',
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
