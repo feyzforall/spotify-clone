@@ -7,7 +7,7 @@ import '../../../entities/playlist.dart';
 import '../../../usecases/library_filter_notifier.dart';
 import '../../../usecases/sliver_app_bar_notifier.dart';
 import '../../../usecases/sliver_title_visibility_controller.dart';
-import '../../widgets/filter_pill_button.dart';
+import '../widgets/filter_pill_button.dart';
 
 part 'library_page_widgets.dart';
 

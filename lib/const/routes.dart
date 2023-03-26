@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 
+import '../features/home/home_page.dart';
+import '../features/home/notifications/notifications_screen.dart';
+import '../features/library/library_page.dart';
+import '../features/search/search_page.dart';
 import '../main_screen.dart';
-import '../presentation/pages/home/home_page.dart';
-import '../presentation/pages/home/notifications/notifications_screen.dart';
-import '../presentation/pages/library/library_page.dart';
-import '../presentation/pages/search/search_page.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',

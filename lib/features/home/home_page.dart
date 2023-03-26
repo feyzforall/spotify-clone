@@ -5,9 +5,9 @@ import '../../../const/assets.dart';
 import '../../../const/dimensions.dart';
 import '../../../const/routes.gr.dart';
 import '../../../entities/playlist.dart';
-import '../../widgets/home_album_card.dart';
-import '../../widgets/mini_playlist_card.dart';
-import '../../widgets/new_release_card.dart';
+import '../widgets/home_album_card.dart';
+import '../widgets/mini_playlist_card.dart';
+import '../widgets/new_release_card.dart';
 
 part 'home_page_widgets.dart';
 

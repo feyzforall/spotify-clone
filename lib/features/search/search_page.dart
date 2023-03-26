@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../const/dimensions.dart';
-
-import '../../widgets/genre_card.dart';
+import '../widgets/genre_card.dart';
 
 part 'search_page_widgets.dart';
 
