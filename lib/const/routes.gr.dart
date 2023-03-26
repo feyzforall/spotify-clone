@@ -15,7 +15,7 @@ import 'package:flutter/material.dart' as _i7;
 
 import '../features/home/home_page.dart' as _i3;
 import '../features/home/notifications/notifications_screen.dart' as _i4;
-import '../features/library/library_page.dart' as _i5;
+import '../features/library/presentation/library_page.dart' as _i5;
 import '../features/search/search_page.dart' as _i6;
 import '../main_screen.dart' as _i1;
 

@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 
 import '../features/home/home_page.dart';
 import '../features/home/notifications/notifications_screen.dart';
-import '../features/library/library_page.dart';
+import '../features/library/presentation/library_page.dart';
 import '../features/search/search_page.dart';
 import '../main_screen.dart';
 
